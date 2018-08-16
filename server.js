@@ -8,7 +8,7 @@ const app = express();
 const port = process.env.PORT || 3000
 // Run the app by serving the static files
 // in the dist directory
-app.use(express.static(path.join(__dirname, '/majeni/dist/majeni/')));
+app.use(express.static(path.join(__dirname, '/majeni/dist/majeni')));
 // Body Parser Middleware
 app.use(bodyParser.json());
 // CORS Middleware
