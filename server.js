@@ -8,7 +8,7 @@ const app = express();
 const port = process.env.PORT || 3000
 // Run the app by serving the static files
 // in the dist directory
-app.use(express.static(__dirname + '/dist'));
+app.use(express.static(path.join(__dirname, '/majeni/dist/majeni/')));
 // Body Parser Middleware
 app.use(bodyParser.json());
 // CORS Middleware
@@ -36,7 +36,7 @@ app.use(forceSSL());
 // For all GET requests, send back index.html
 // so that PathLocationStrategy can be used
 app.get('/*', function (req, res) {
-  res.sendFile(path.join(__dirname + '/dist/majeni/index.html'));
+  res.sendFile(path.join(__dirname + '/majeni/dist/majeni/index.html'));
 });
 
 // Start Server
