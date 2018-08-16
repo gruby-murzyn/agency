@@ -1,0 +1,14 @@
+{
+  "name": "majeni",
+  "version": "1.0.0",
+  "description": "international bussiness agency website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Geofrey Zellah",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
