@@ -1,0 +1,86 @@
+<div class="what-we-do">
+  <div class="what-we-do__top">
+    <div class="what-we-do__left">
+      <h2>What we
+        <strong>do</strong>
+      </h2>
+    </div>
+
+    <div class="what-we-do__right">
+      <p> {{description}}</p>
+    </div>
+  </div>
+  <div class="animation">
+    <div class="center">
+      <div class="sat1" (mouseenter)="showDetails(1)" (mouseleave)="showDetails(0)">
+      </div>
+      <div class="sat2" (mouseenter)="showDetails(2)" (mouseleave)="showDetails(0)">
+      </div>
+      <div class="sat3" (mouseenter)="showDetails(3)" (mouseleave)="showDetails(0)">
+      </div>
+      <div class="sat4" (mouseenter)="showDetails(4)" (mouseleave)="showDetails(0)">
+      </div>
+      <h3>
+        <span>{{title_a}}</span>
+        <strong>{{title_b}}</strong>
+      </h3>
+
+    </div>
+  </div>
+</div>
+<div id="mobile-carousel" class="carousel slide" data-ride="carousel">
+
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+    <li data-target="#demo" data-slide-to="3"></li>
+  </ol>
+
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-title">
+      <h3>What we do </h3>
+    </div>
+    <div class="carousel-item active">
+      <figure>
+        <img src="/assets/images/ico_1_light.png" alt="Los Angeles" width="1100" height="500">
+      </figure>
+      <div class="carousel-caption  d-md-block">
+        <h5>IT</h5>
+        <p>OUTSOURCING</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <figure>
+        <img src="/assets/images/ico_2_light.png" alt="Chicago" width="1100" height="500">
+      </figure>
+      <div class="carousel-caption  d-md-block">
+        <h5>Team</h5>
+        <p>Leasing</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <figure>
+        <img src="assets/images/ico_3_light.png" alt="New York" width="1100" height="500">
+      </figure>
+      <div class="carousel-caption  d-md-block">
+        <h5>Managed</h5>
+        <p>Service</p>
+      </div>
+    </div>
+
+    <div class="carousel-item">
+      <figure>
+        <img src="assets/images/ico_4_light.png" alt="New York" width="1100" height="500">
+      </figure>
+      <div class="carousel-caption  d-md-block">
+        <h5>Fixed Price</h5>
+        <p>Project</p>
+      </div>
+    </div>
+
+  </div>
+
+</div>

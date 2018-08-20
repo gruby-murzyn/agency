@@ -6,13 +6,19 @@ import { AppComponent } from './app.component';
 import { MainLayoutComponent } from './layout/main-layout/main-layout.component';
 import { AppRoutingModule } from './/app-routing.module';
 import { MainNavDirective } from './layout/main-nav.directive';
+import { AboutComponent } from './components/about/about.component';
+import { WhatwedoComponent } from './components/whatwedo/whatwedo.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NgStickyDirective,
     MainLayoutComponent,
-    MainNavDirective
+    MainNavDirective,
+    AboutComponent,
+    WhatwedoComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
