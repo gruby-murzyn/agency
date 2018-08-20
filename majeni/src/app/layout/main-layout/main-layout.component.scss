@@ -184,11 +184,9 @@
 
 @media only screen and(max-width: 768px) {
   .main-nav {
-    margin: 0;
     display: block;
-    position: inherit;
-    height: auto;
-    overflow: auto;
+    min-height: 100px;
+    overflow: hidden;
     background: white;
   }
   .main-nav__list {
@@ -206,26 +204,25 @@
     display: flex;
   }
   .main-nav__logo {
-    position: relative;
-    bottom: 49px;
+    position: relative !important;
+    margin-top: -49px;
     background-repeat: no-repeat;
     background-image: url("/assets/images/logo-green.png");
   }
   .man-nav__logo-green {
     visibility: hidden !important;
+    height: 125px;
   }
   .main-nav__bars {
-    display: flex;
-    justify-content: flex-end;
     cursor: pointer;
     padding: 26px;
     font-size: 50px;
     color: #00964e;
-    /* position: absolute; */
     top: 0;
-    /* bottom: 36px; */
-    /* right: 28px; */
-    margin-top: -196px;
+    position: relative !important;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: -80px;
   }
   .main-nav__link {
     color: #444;
