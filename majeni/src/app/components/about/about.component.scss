@@ -1,0 +1,119 @@
+.about-us {
+  margin-top: -245px;
+}
+
+.about-us__left {
+  display: flex;
+  background-image: url('/assets/images/01.jpg');
+  background-repeat: no-repeat;
+  min-height: 450px;
+  background-position: center;
+  background-size: cover;
+}
+
+.about-us__left::before {
+  display: none;
+  width: 100%;
+  height: 300px;
+  margin-top: 154px;
+  content: '';
+  background-image: url('/assets/images/01_2.jpg')
+}
+
+.about-us__leftdescription {
+  margin-left: auto;
+  flex: 0 1 43%;
+  margin-left: auto;
+  font-size: 1.27rem;
+  font-weight: normal;
+  h1 {
+    font-family: "proxima-nova-n4", "proxima-nova";
+    font-style: normal;
+    font-weight: 400;
+  }
+  h1::after {
+    content: '';
+    width: 85px;
+    height: 2px;
+    position: absolute;
+    background-color: #00964e;
+    margin-top: 53px;
+    margin-left: -150px;
+  }
+}
+
+.about-us__right {
+  display: flex;
+  background-image: url('/assets/images/02.jpg');
+  background-repeat: no-repeat;
+  min-height: 450px;
+  background-position: center;
+  background-size: cover;
+}
+
+.about-us__right::before {
+  display: none;
+  width: 100%;
+  height: 300px;
+  margin-top: 154px;
+  content: '';
+  background-image: url('/assets/images/02_2.jpg')
+}
+
+.about-us__rightdescription {
+  margin-top: 60px;
+  p {
+    width: 43%;
+    margin-left: 20px;
+    font-size: 1.27rem;
+    font-weight: normal;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    text-rendering: optimizeLegibility;
+  }
+  h1 {
+    margin-left: 20px;
+  }
+  h1::after {
+    content: '';
+    width: 85px;
+    height: 2px;
+    position: absolute;
+    background-color: #00964e;
+    margin-top: 53px;
+    left: 20px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .about-us__left {
+    display: flex;
+    flex-direction: column;
+    background-image: none;
+  }
+  .about-us__leftdescription {
+    flex: 0 1 100%;
+    margin: 50px;
+  }
+  .about-us__right {
+    display: block;
+    background-image: none;
+    margin-top: -200px;
+  }
+  .about-us__rightdescription {
+    flex: 0 1 100%;
+    margin: 50px;
+    h1::after {
+      left: 73px;
+    }
+    p {
+      width: 100%;
+    }
+  }
+  .about-us__left::before {
+    display: block;
+  }
+  .about-us__right::before {
+    display: block;
+  }
+}
