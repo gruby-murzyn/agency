@@ -149,12 +149,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_about_about_component__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./components/about/about.component */ "./src/app/components/about/about.component.ts");
 /* harmony import */ var _components_whatwedo_whatwedo_component__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./components/whatwedo/whatwedo.component */ "./src/app/components/whatwedo/whatwedo.component.ts");
 /* harmony import */ var _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./components/footer/footer.component */ "./src/app/components/footer/footer.component.ts");
+/* harmony import */ var _components_why_choose_us_why_choose_us_component__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./components/why-choose-us/why-choose-us.component */ "./src/app/components/why-choose-us/why-choose-us.component.ts");
 var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
 
 
 
@@ -178,7 +180,8 @@ var AppModule = /** @class */ (function () {
                 _layout_main_nav_directive__WEBPACK_IMPORTED_MODULE_7__["MainNavDirective"],
                 _components_about_about_component__WEBPACK_IMPORTED_MODULE_8__["AboutComponent"],
                 _components_whatwedo_whatwedo_component__WEBPACK_IMPORTED_MODULE_9__["WhatwedoComponent"],
-                _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_10__["FooterComponent"]
+                _components_footer_footer_component__WEBPACK_IMPORTED_MODULE_10__["FooterComponent"],
+                _components_why_choose_us_why_choose_us_component__WEBPACK_IMPORTED_MODULE_11__["WhyChooseUsComponent"]
             ],
             imports: [
                 _angular_platform_browser__WEBPACK_IMPORTED_MODULE_0__["BrowserModule"],
@@ -415,6 +418,133 @@ var WhatwedoComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "./src/app/components/why-choose-us/why-choose-us.component.html":
+/*!***********************************************************************!*\
+  !*** ./src/app/components/why-choose-us/why-choose-us.component.html ***!
+  \***********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"why-choose-us\">\n  <div class=\"why-choose-us__header\">\n    <h4 class=\" text-center why-choose-us__center\">\n      why you should\n      <strong> Choose Us?</strong>\n    </h4>\n  </div>\n  <div class=\"why-choose-us__description\">\n    <div class=\"why-choose-us__description\">\n      <ul class=\"why-choose-us__list-top\">\n        <li class=\"why-choose-us__leader\" (click)=\"toggleCard(leader)\" style=\"background-image: url('/assets/images/solidne-fundamenty.png')\"\n          *ngFor=\"let leader of inspiringLeaders\">\n          <h4>{{leader.name}}</h4>\n          <div class=\"why-choose-us__card card\" *ngIf=\"leader.shown\">\n            <p>{{leader.text}}</p>\n            <div class=\"topRight fa fa-times\"></div>\n          </div>\n        </li>\n      </ul>\n    </div>\n  </div>\n</div>\n"
+
+/***/ }),
+
+/***/ "./src/app/components/why-choose-us/why-choose-us.component.scss":
+/*!***********************************************************************!*\
+  !*** ./src/app/components/why-choose-us/why-choose-us.component.scss ***!
+  \***********************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = ".why-choose-us {\n  background-repeat: no-repeat;\n  background-size: cover;\n  background-image: url(\"/assets/images/dlaczego_warto.jpg\"); }\n\n.why-choose-us li {\n  padding-top: 211px;\n  position: relative;\n  height: 345px;\n  text-align: center;\n  background-position: 50% 25%;\n  background-repeat: no-repeat;\n  cursor: pointer;\n  color: white;\n  width: 25%;\n  text-align: center;\n  color: #fff;\n  display: flex;\n  align-items: center;\n  justify-content: center; }\n\n.why-choose-us__center {\n  font-size: 2.25rem;\n  font-family: \"proxima-nova-n4\", \"proxima-nova\";\n  font-style: normal;\n  font-weight: 400;\n  line-height: 2.5rem;\n  position: relative;\n  top: 50px; }\n\n.why-choose-us__center::after {\n  position: absolute;\n  width: 90px;\n  height: 3px;\n  content: '';\n  display: block;\n  background-color: #00964e;\n  left: 800px;\n  margin-left: 0;\n  margin-top: 12px; }\n\n.why-choose-us__header h4 {\n  color: white; }\n\n.why-choose-us ul {\n  list-style: none;\n  display: flex;\n  justify-content: space-around;\n  padding: 0;\n  margin: 0;\n  margin-top: 3.125rem;\n  flex-wrap: wrap;\n  list-style-type: none; }\n\nh4 {\n  font-size: 1.3rem;\n  font-weight: 600; }\n\n.why-choose-us__card {\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  position: absolute;\n  background-color: #e1ebde;\n  padding: 70px 35px;\n  font-size: 0.875rem;\n  text-align: left; }\n\n.why-choose-us__card > p {\n  font-size: inherit;\n  line-height: 1.6;\n  color: black;\n  margin-bottom: 1rem;\n  text-rendering: optimizeLegibility; }\n\n.fa-times {\n  color: black !important;\n  position: absolute;\n  float: right;\n  right: 10px;\n  top: 0; }\n\n@media only screen and (max-width: 768px) {\n  .why-choose-us__list-top {\n    display: flex;\n    flex-direction: column;\n    align-items: center; }\n  .why-choose-us li {\n    width: 100%; } }\n"
+
+/***/ }),
+
+/***/ "./src/app/components/why-choose-us/why-choose-us.component.ts":
+/*!*********************************************************************!*\
+  !*** ./src/app/components/why-choose-us/why-choose-us.component.ts ***!
+  \*********************************************************************/
+/*! exports provided: WhyChooseUsComponent */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WhyChooseUsComponent", function() { return WhyChooseUsComponent; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+var WhyChooseUsComponent = /** @class */ (function () {
+    function WhyChooseUsComponent() {
+        this.name = 'Angular';
+        this.showCard = false;
+        this.inspiringLeaders = [
+            {
+                name: 'Solid Foundations',
+                img: '/assets/images/solidne-fundamenty.png',
+                // tslint:disable-next-line:max-line-length
+                text: 'Thanks to belonging to an international organization, which operates since 1988 and has a huge knowledge base, ASTEK Poland enjoys its stable position on the market.',
+                shown: false
+            },
+            {
+                name: 'Ambitious Projects',
+                img: '/assets/images/ambitne-projekty.png',
+                // tslint:disable-next-line:max-line-length
+                text: 'Thanks to belonging to an international organization, which operates since 1988 and has a huge knowledge base, ASTEK Poland enjoys its stable position on the market.',
+                shown: false
+            },
+            {
+                name: 'Individual approach and friendly atmosphere',
+                img: '/assets/images/indywidualny-rozwoj.png',
+                // tslint:disable-next-line:max-line-length
+                text: 'Thanks to belonging to an international organization, which operates since 1988 and has a huge knowledge base, ASTEK Poland enjoys its stable position on the market.',
+                shown: false
+            },
+            {
+                name: 'Famous Brands',
+                img: '/assets/images/znane-marki.png',
+                // tslint:disable-next-line:max-line-length
+                text: 'Thanks to belonging to an international organization, which operates since 1988 and has a huge knowledge base, ASTEK Poland enjoys its stable position on the market.',
+                shown: false
+            },
+            {
+                name: 'Inspiring Leaders',
+                img: '/assets/images/inspirujacy-liderzy.png',
+                // tslint:disable-next-line:max-line-length
+                text: 'Thanks to belonging to an international organization, which operates since 1988 and has a huge knowledge base, ASTEK Poland enjoys its stable position on the market.',
+                shown: false
+            },
+            {
+                name: 'Flexibility',
+                img: '/assets/images/elastycznosc.png',
+                // tslint:disable-next-line:max-line-length
+                text: 'Thanks to belonging to an international organization, which operates since 1988 and has a huge knowledge base, ASTEK Poland enjoys its stable position on the market.',
+                shown: false
+            },
+            {
+                name: 'Extra Benefits',
+                img: '/assets/images/dodatkowe-korzysci.png',
+                // tslint:disable-next-line:max-line-length
+                text: 'Thanks to belonging to an international organization, which operates since 1988 and has a huge knowledge base, ASTEK Poland enjoys its stable position on the market.',
+                shown: false
+            },
+            {
+                name: 'Referral System',
+                img: '/assets/images/system-polecen.png',
+                // tslint:disable-next-line:max-line-length
+                text: 'Thanks to belonging to an international organization, which operates since 1988 and has a huge knowledge base, ASTEK Poland enjoys its stable position on the market.',
+                shown: false
+            },
+        ];
+    }
+    WhyChooseUsComponent.prototype.toggleCard = function (leader) {
+        this.inspiringLeaders.map(function (l) {
+            if (l.name === leader.name) {
+                l.shown = !l.shown;
+            }
+            else {
+                l.shown = false;
+            }
+        });
+    };
+    WhyChooseUsComponent = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Component"])({
+            selector: 'app-why-choose-us',
+            template: __webpack_require__(/*! ./why-choose-us.component.html */ "./src/app/components/why-choose-us/why-choose-us.component.html"),
+            styles: [__webpack_require__(/*! ./why-choose-us.component.scss */ "./src/app/components/why-choose-us/why-choose-us.component.scss")]
+        })
+    ], WhyChooseUsComponent);
+    return WhyChooseUsComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "./src/app/layout/main-layout/main-layout.component.html":
 /*!***************************************************************!*\
   !*** ./src/app/layout/main-layout/main-layout.component.html ***!
@@ -422,7 +552,7 @@ var WhatwedoComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"main-header\">\r\n  <nav class=\"main-nav\" ng-sticky [offSet]=\"0\" [addClass]=\"'main-sticky'\" appMainNav #ref=\"appMainNav\">\r\n    <div class=\"main-nav__logo \" ng-sticky [offSet]=\"0\" [addClass]=\"'main-sticky__logo'\">\r\n      <img class=\"man-nav__logo-green\" src=\"/assets/images/logo-white.png\">\r\n    </div>\r\n    <div class=\"main-nav__toggle\">\r\n      <i class=\"main-nav__bars fa fa-bars\" ng-sticky [offSet]=\"0\" [addClass]=\"'main-bars'\"></i>\r\n    </div>\r\n    <ul class=\"main-nav__list \" ng-sticky [addClass]=\"'main-sticky-link'\" [ngClass]=\"ref.click === true? 'Navbar__ToggleShow' :''\">\r\n      <li class=\"main-nav__item\">\r\n        <a class=\"main-nav__link\" href=\"#\">Home</a>\r\n      </li>\r\n      <li class=\"main-nav__item\">\r\n        <a class=\"main-nav__link\" href=\"#\">About us</a>\r\n      </li>\r\n      <li class=\"main-nav__item\">\r\n        <a class=\"main-nav__link\" href=\"#\">What we do</a>\r\n      </li>\r\n      <li class=\"main-nav__item\">\r\n        <a class=\"main-nav__link \" href=\"#\">Projects</a>\r\n      </li>\r\n      <li class=\"main-nav__item\">\r\n        <a class=\"main-nav__link \" href=\"#\">Contact</a>\r\n      </li>\r\n    </ul>\r\n  </nav>\r\n\r\n  <div class=\"main-banner\">\r\n    <h2>We are a team of\r\n      <strong>experts</strong>.</h2>\r\n    <p>Founded in 2014, the BDTS Poland specializes in IT personnel outsourcing for the areas of banking, insurance, telecommunications,\r\n      high-tech, pharmacy, logistics and many others</p>\r\n    <a href=\"http://en.astek.pl/about-us/\" class=\"main-banner__green-button main-banner__arrow-right\">Read more\r\n      <i></i>\r\n    </a>\r\n    <a href=\"#\" class=\"main-banner__arrow-down\"></a>\r\n  </div>\r\n</div>\r\n\r\n<app-whatwedo></app-whatwedo>\r\n<app-about></app-about>\r\n<app-footer></app-footer>\r\n"
+module.exports = "<div class=\"main-header\">\r\n  <nav class=\"main-nav\" ng-sticky [offSet]=\"0\" [addClass]=\"'main-sticky'\" appMainNav #ref=\"appMainNav\">\r\n    <div class=\"main-nav__logo \" ng-sticky [offSet]=\"0\" [addClass]=\"'main-sticky__logo'\">\r\n      <img class=\"man-nav__logo-green\" src=\"/assets/images/logo-white.png\">\r\n    </div>\r\n    <div class=\"main-nav__toggle\">\r\n      <i class=\"main-nav__bars fa fa-bars\" ng-sticky [offSet]=\"0\" [addClass]=\"'main-bars'\"></i>\r\n    </div>\r\n    <ul class=\"main-nav__list \" ng-sticky [addClass]=\"'main-sticky-link'\" [ngClass]=\"ref.click === true? 'Navbar__ToggleShow' :''\">\r\n      <li class=\"main-nav__item\">\r\n        <a class=\"main-nav__link\" href=\"#\">Home</a>\r\n      </li>\r\n      <li class=\"main-nav__item\">\r\n        <a class=\"main-nav__link\" href=\"#\">About us</a>\r\n      </li>\r\n      <li class=\"main-nav__item\">\r\n        <a class=\"main-nav__link\" href=\"#\">What we do</a>\r\n      </li>\r\n      <li class=\"main-nav__item\">\r\n        <a class=\"main-nav__link \" href=\"#\">Projects</a>\r\n      </li>\r\n      <li class=\"main-nav__item\">\r\n        <a class=\"main-nav__link \" href=\"#\">Contact</a>\r\n      </li>\r\n    </ul>\r\n  </nav>\r\n\r\n  <div class=\"main-banner\">\r\n    <h2>We are a team of\r\n      <strong>experts</strong>.</h2>\r\n    <p>Founded in 2014, the BDTS Poland specializes in IT personnel outsourcing for the areas of banking, insurance, telecommunications,\r\n      high-tech, pharmacy, logistics and many others</p>\r\n    <a href=\"http://en.astek.pl/about-us/\" class=\"main-banner__green-button main-banner__arrow-right\">Read more\r\n      <i></i>\r\n    </a>\r\n    <a href=\"#\" class=\"main-banner__arrow-down\"></a>\r\n  </div>\r\n</div>\r\n\r\n<app-whatwedo></app-whatwedo>\r\n<app-about></app-about>\r\n<app-why-choose-us></app-why-choose-us>\r\n<app-footer></app-footer>\r\n"
 
 /***/ }),
 

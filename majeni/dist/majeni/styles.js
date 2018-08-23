@@ -89,7 +89,7 @@ module.exports = "/*!\n *  Font Awesome 4.7.0 by @davegandy - http://fontawesome
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "/* You can add global styles to this file, and also import other style files */\n"
+module.exports = "@media only screen and (max-width: 768px) {\n  html,\n  body {\n    width: 100%;\n    height: 100%;\n    margin: 0px;\n    padding: 0px; } }\n"
 
 /***/ }),
 
