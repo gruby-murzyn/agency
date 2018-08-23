@@ -1,0 +1,22 @@
+<div class="why-choose-us">
+  <div class="why-choose-us__header">
+    <h4 class=" text-center why-choose-us__center">
+      why you should
+      <strong> Choose Us?</strong>
+    </h4>
+  </div>
+  <div class="why-choose-us__description">
+    <div class="why-choose-us__description">
+      <ul class="why-choose-us__list-top">
+        <li class="why-choose-us__leader" (click)="toggleCard(leader)" style="background-image: url('/assets/images/solidne-fundamenty.png')"
+          *ngFor="let leader of inspiringLeaders">
+          <h4>{{leader.name}}</h4>
+          <div class="why-choose-us__card card" *ngIf="leader.shown">
+            <p>{{leader.text}}</p>
+            <div class="topRight fa fa-times"></div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>

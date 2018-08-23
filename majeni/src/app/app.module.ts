@@ -9,6 +9,7 @@ import { MainNavDirective } from './layout/main-nav.directive';
 import { AboutComponent } from './components/about/about.component';
 import { WhatwedoComponent } from './components/whatwedo/whatwedo.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { WhyChooseUsComponent } from './components/why-choose-us/why-choose-us.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { FooterComponent } from './components/footer/footer.component';
     MainNavDirective,
     AboutComponent,
     WhatwedoComponent,
-    FooterComponent
+    FooterComponent,
+    WhyChooseUsComponent
   ],
   imports: [
     BrowserModule,

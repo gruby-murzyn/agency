@@ -1,0 +1,103 @@
+.why-choose-us {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url('/assets/images/dlaczego_warto.jpg');
+}
+
+.why-choose-us li {
+  padding-top: 211px;
+  position: relative;
+  height: 345px;
+  text-align: center;
+  background-position: 50% 25%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  color: white;
+  width: 25%;
+  text-align: center;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.why-choose-us__center {
+  font-size: 2.25rem;
+  font-family: "proxima-nova-n4", "proxima-nova";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.5rem;
+  position: relative;
+  top: 50px;
+}
+
+.why-choose-us__center::after {
+  position: absolute;
+  width: 90px;
+  height: 3px;
+  content: '';
+  display: block;
+  background-color: #00964e;
+  left: 800px;
+  margin-left: 0;
+  margin-top: 12px;
+}
+
+.why-choose-us__header h4 {
+  color: white;
+}
+
+.why-choose-us ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+  margin-top: 3.125rem;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+h4 {
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.why-choose-us__card {
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  background-color: #e1ebde;
+  padding: 70px 35px;
+  font-size: 0.875rem;
+  text-align: left;
+}
+
+.why-choose-us__card>p {
+  font-size: inherit;
+  line-height: 1.6;
+  color: black;
+  margin-bottom: 1rem;
+  text-rendering: optimizeLegibility;
+}
+
+.fa-times {
+  color: black !important;
+  position: absolute;
+  float: right;
+  right: 10px;
+  top: 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .why-choose-us__list-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .why-choose-us li {
+    width: 100%;
+  }
+}
