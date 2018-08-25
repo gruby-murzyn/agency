@@ -10,6 +10,9 @@ import { AboutComponent } from './components/about/about.component';
 import { WhatwedoComponent } from './components/whatwedo/whatwedo.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { WhyChooseUsComponent } from './components/why-choose-us/why-choose-us.component';
+import { TeamComponent } from './team/team.component';
+import { ProjectsComponent } from './projects/projects.component';
+import { ClientsComponent } from './clients/clients.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { WhyChooseUsComponent } from './components/why-choose-us/why-choose-us.c
     AboutComponent,
     WhatwedoComponent,
     FooterComponent,
-    WhyChooseUsComponent
+    WhyChooseUsComponent,
+    TeamComponent,
+    ProjectsComponent,
+    ClientsComponent
   ],
   imports: [
     BrowserModule,

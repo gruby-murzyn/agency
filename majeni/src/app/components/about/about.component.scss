@@ -1,6 +1,41 @@
 .about-us {
   margin-top: -245px;
 }
+.about-us__description{
+  margin-top: 110px;
+
+}
+.tatsu-Hy-oVJfzMm.tatsu-section {
+  background: linear-gradient(270deg, rgba(82,142,255,1) 0%, rgba(87,45,237,1) 100%);
+}
+.about-us__text{
+  display: flex;
+  margin: 30px;
+  &-header{
+    width: 50%;
+    margin: 0 auto;
+    background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url('/assets/images/paper pin.png');
+    h1{
+      text-align: center;
+    }
+  }
+  &-left{
+    margin: 30px;
+    width: 100%;
+    line-height: 1.27rem;
+  }
+  &-right{
+    margin: 30px;
+  }
+  p{
+    font-size: 22px;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    text-rendering: optimizeLegibility;
+  }
+}
 
 .about-us__left {
   display: flex;
