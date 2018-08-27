@@ -240,3 +240,42 @@
     }
   }
 }
+
+@media only screen and (min-width: 320px) and (max-width: 568px){
+  .main-header{
+    min-height: 165vh;
+  }
+}
+
+@media only screen and (min-width: 375px) and (max-width: 667px){
+  .main-header{
+    min-height: 127vh;
+  }
+}
+@media only screen and (min-width: 414px) and (max-width: 735px){
+  .main-header{
+    min-height: 103vh;
+  }
+}
+
+@media only screen and (min-width: 360px) and (max-width: 640px){
+  .main-header{
+    min-height: 123vh;
+  }
+}
+
+@media only screen and (min-width: 411px) and (max-width: 731px){
+  .main-header{
+    min-height: 103vh;
+  }
+}
+@media only screen and (min-width: 411px) and (max-width: 823px){
+  .main-header{
+    min-height: 3vh;
+  }
+}
+@media only screen and (min-width: 375px) and (max-width: 667px){
+  .main-header{
+    min-height: 127vh;
+  }
+}

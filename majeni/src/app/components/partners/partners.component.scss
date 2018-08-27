@@ -1,0 +1,54 @@
+.our-partners {
+  text-align: center;
+  &__description {
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+  }
+  &__header {
+    h1 {
+      font-size: 4.0rem;
+      font-weight: 800;
+      font-family: 'Satisfy', cursive;
+      color: #16334e;
+      line-height: 1;
+      margin-bottom: 35px;
+    }
+    h6 {
+      font-size: 1.8rem;
+      text-transform: uppercase;
+      font-weight: 700;
+      font-family: "Nunito", sans-serif;
+      color: #aaaaaa;
+      margin-bottom: 10px;
+    }
+  }
+  &__card {
+    background-color: white;
+    border-width: 1px 1px 1px 1px;
+    border-color: #e6e6e6;
+    box-shadow: 0px 5px 45px 0px rgba(102, 102, 102, 0.24);
+    border-radius: 10px;
+    border-radius: 10px;
+    flex: 0 0 33.3333%;
+    flex-basis: 22%;
+    margin: 30px;
+    padding: 94px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url('/assets/images/projects.png');
+  }
+}
+
+.partners-box {
+  padding: 130px 0;
+}
+
+@media only screen and (max-width: 768px){
+  .our-partners{
+    &__description{
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

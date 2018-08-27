@@ -24,6 +24,10 @@
     text-align: center;
     padding: 70px; 
     }
+    &-card:hover{
+      border-color: #ff6363;
+      transition: all 500ms ease;
+    }
   }
   &__header{
       text-align: center;
@@ -41,3 +45,19 @@
     color: #303132;
 }
 }
+
+@media only screen and (max-width: 768px){
+  .our-team__members-card{
+      width: 300px;
+      margin: 20px auto;
+      
+      }
+      
+      .our-team__members{
+      display: flex;
+      flex-direction: column;
+      margin: 0 auto;
+      margin-left: 0 auto;
+      padding: 0px;
+      }
+     }

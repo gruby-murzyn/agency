@@ -13,6 +13,8 @@ import { WhyChooseUsComponent } from './components/why-choose-us/why-choose-us.c
 import { TeamComponent } from './components/team/team.component';
 import { ProjectsComponent } from './components/projects/projects.component';
 import { ClientsComponent } from './components/clients/clients.component';
+import { HowItWorksComponent } from './components/how-it-works/how-it-works.component';
+import { PartnersComponent } from './components/partners/partners.component';
 
 @NgModule({
   declarations: [
@@ -26,11 +28,12 @@ import { ClientsComponent } from './components/clients/clients.component';
     WhyChooseUsComponent,
     TeamComponent,
     ProjectsComponent,
-    ClientsComponent
+    ClientsComponent,
+    HowItWorksComponent,
+    PartnersComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule,
     AppRoutingModule
   ],
   providers: [],

@@ -7,21 +7,22 @@
       <i class="main-nav__bars fa fa-bars" ng-sticky [offSet]="0" [addClass]="'main-bars'"></i>
     </div>
     <ul class="main-nav__list " ng-sticky [addClass]="'main-sticky-link'" [ngClass]="ref.click === true? 'Navbar__ToggleShow' :''">
-      <li class="main-nav__item">
-        <a class="main-nav__link" href="#">Home</a>
+      <li class="main-nav__item" routerLinkActive="active">
+        <a class="main-nav__link" routerLink="/">Home</a>
       </li>
-      <li class="main-nav__item">
-        <a class="main-nav__link" href="#">About us</a>
+      <li class="main-nav__item" routerLinkActive="active">
+        <a class="main-nav__link" routerLink="/home/about">About us</a>
       </li>
-      <li class="main-nav__item">
-        <a class="main-nav__link" href="#">What we do</a>
+      <li class="main-nav__item" routerLinkActive="active">
+        <a class="main-nav__link" routerLink="/home/what">What we do</a>
       </li>
-      <li class="main-nav__item">
-        <a class="main-nav__link " href="#">Projects</a>
+      <li class="main-nav__item" routerLinkActive="active">
+        <a class="main-nav__link" routerLink="/home/projects">Projects</a>
       </li>
-      <li class="main-nav__item">
-        <a class="main-nav__link " href="#">Contact</a>
+      <li class="main-nav__item" routerLinkActive="active">
+        <a class="main-nav__link" routerLink="/home/contacts">Contacts</a>
       </li>
+
     </ul>
   </nav>
 
@@ -45,3 +46,5 @@
   <app-team></app-team>
   <app-footer></app-footer>
 </div>
+
+
