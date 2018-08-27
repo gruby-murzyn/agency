@@ -1,10 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NgStickyDirective } from 'ng-sticky';
-import { RouterModule } from '@angular/router';
+
+import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 import { AppComponent } from './app.component';
 import { MainLayoutComponent } from './layout/main-layout/main-layout.component';
-import { AppRoutingModule } from './/app-routing.module';
+import { AppRoutingModule } from './app-routing.module';
 import { MainNavDirective } from './layout/main-nav.directive';
 import { AboutComponent } from './components/about/about.component';
 import { WhatwedoComponent } from './components/whatwedo/whatwedo.component';
@@ -34,6 +35,7 @@ import { PartnersComponent } from './components/partners/partners.component';
   ],
   imports: [
     BrowserModule,
+    ScrollToModule.forRoot(),
     AppRoutingModule
   ],
   providers: [],
