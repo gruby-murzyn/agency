@@ -18,12 +18,13 @@ router.get('/send', cors(), (req, res) => {
   `;
 
     let transporter = nodemailer.createTransport({
-        service: 'gmail',
+        host: 'smtp.gmail.com',
+        port: 465,
         secure: false,
         port: 25,
         auth: {
             user: 'hotbonge@gmail.com',
-            pass: '404makumba'
+            pass: 'jasmine2016'
         },
         tls: {
             rejectUnauthorized: false
