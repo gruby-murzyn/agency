@@ -2,10 +2,8 @@ const express = require('express');
 const router = express.Router();
 const request = require('request');
 const nodemailer = require('nodemailer');
-const cors = require('cors');
 
-router.options('/send', cors()); 
-router.post('/send', cors(), (req, res) => {
+router.post('/send', (req, res) => {
     const outputData = `
     <p>You have a new contact request</p>
     <h3>Contact Details</h3>
@@ -18,10 +16,7 @@ router.post('/send', cors(), (req, res) => {
   `;
 
     let transporter = nodemailer.createTransport({
-        host: 'smtp.gmail.com',
-        port: 465,
-        secure: false,
-        port: 25,
+       service: 'gmail',
         auth: {
             user: 'hotbonge@gmail.com',
             pass: 'jasmine2016'
