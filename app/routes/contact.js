@@ -22,8 +22,8 @@ router.get('/send', cors(), (req, res) => {
         secure: false,
         port: 25,
         auth: {
-            user: 'hotbonge@gmail.com',
-            pass: '404makumba'
+            user: 'myEmail',
+            pass: 'MyPass'
         },
         tls: {
             rejectUnauthorized: false
@@ -31,8 +31,8 @@ router.get('/send', cors(), (req, res) => {
     });
 
     let HelperOptions = {
-        from: '"Geofrey" <hotbonge@gmail.com',
-        to: 'hotbonge@gmail.com',
+        from: '"Geofrey" <myEmail',
+        to: 'myEmail',
         subject: 'Majeni Contact Request',
         text: 'Hello',
         html: outputData
