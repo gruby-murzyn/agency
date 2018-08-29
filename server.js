@@ -10,7 +10,11 @@ const port = process.env.PORT || 3000
 // in the dist directory
 app.use(express.static(path.join(__dirname, '/majeni/dist/majeni')));
 // Body Parser Middleware
+app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
+//routes
+const contact = require('./app/routes/contact');
+app.use('/contact', contact);
 // CORS Middleware
 app.use(cors());
 // If an incoming request uses
@@ -37,6 +41,15 @@ app.use(forceSSL());
 // so that PathLocationStrategy can be used
 app.get('/*', function (req, res) {
   res.sendFile(path.join(__dirname + '/majeni/dist/majeni/index.html'));
+  res.header('Access-Control-Allow-Origin', 'URLs to trust of allow');
+  res.header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
+  res.header('Access-Control-Allow-Headers', 'Content-Type');
+  if ('OPTIONS' == req.method) {
+  res.sendStatus(200);
+  } else {
+    next();
+  }
+
 });
 
 // Start Server

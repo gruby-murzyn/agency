@@ -2,7 +2,7 @@
   "name": "majeni",
   "version": "1.0.0",
   "description": "international bussiness agency website",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "dev": "nodemon server.js"
   },
@@ -11,6 +11,9 @@
   "dependencies": {
     "cors": "^2.8.4",
     "express": "^4.16.3",
+    "index.js": "0.0.3",
+    "nodemailer": "^4.6.8",
+    "request": "^2.88.0",
     "tree-cli": "^0.4.12"
   }
 }
