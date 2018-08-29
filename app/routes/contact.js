@@ -5,7 +5,7 @@ const nodemailer = require('nodemailer');
 const cors = require('cors');
 
 router.options('/send', cors()); 
-router.get('/send', cors(), (req, res) => {
+router.post('/send', cors(), (req, res) => {
     const outputData = `
     <p>You have a new contact request</p>
     <h3>Contact Details</h3>
