@@ -18,8 +18,8 @@ router.post('/send', (req, res) => {
     let transporter = nodemailer.createTransport({
        service: 'gmail',
         auth: {
-            user: 'hotbonge@gmail.com',
-            pass: 'jasmine2016'
+            user: 'myEmail',
+            pass: 'pass'
         },
         tls: {
             rejectUnauthorized: false
@@ -27,8 +27,8 @@ router.post('/send', (req, res) => {
     });
 
     let HelperOptions = {
-        from: '"Geofrey" <hotbonge@gmail.com',
-        to: 'hotbonge@gmail.com',
+        from: '"Geofrey" <myEmail',
+        to: 'myEmail',
         subject: 'Majeni Contact Request',
         text: 'Hello',
         html: outputData
