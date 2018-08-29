@@ -19,25 +19,7 @@ app.use(bodyParser.json());
 //routes
 const contact = require('./app/routes/contact');
 app.use('/contact', contact);
-// If an incoming request uses
-// a protocol other than HTTPS,
-// redirect that request to the
-// same url but with HTTPS
-const forceSSL = function () {
-  return function (req, res, next) {
-    if (req.headers['x-forwarded-proto'] !== 'https') {
-      return res.redirect(
-        ['https://', req.get('Host'), req.url].join('')
-      );
-    }
-    next();
-  }
-}
 
-// Instruct the app
-// to use the forceSSL
-// middleware
-app.use(forceSSL());
 app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
