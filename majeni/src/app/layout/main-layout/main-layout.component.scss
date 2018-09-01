@@ -99,6 +99,7 @@
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  height: 197px;
   h2 {
     font-size: 3.75rem;
     line-height: 5.375rem;
@@ -230,6 +231,7 @@
     color: #444;
   }
   .main-banner {
+    height: auto;
     &__arrow-down {
       display: block !important;
       position: initial;

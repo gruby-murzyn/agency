@@ -27,8 +27,8 @@ router.post('/send', (req, res) => {
     });
 
     let HelperOptions = {
-        from: '"Geofrey" <myEmail',
-        to: 'myEmail',
+        from: '"Geofrey" <hotbonge@gmail.com',
+        to: 'jasmine2016',
         subject: 'Majeni Contact Request',
         text: 'Hello',
         html: outputData
@@ -43,6 +43,6 @@ router.post('/send', (req, res) => {
         console.log("The message was sent!");
         console.log(info);
     });
-
+    setTimeout((function() {res.send("ok")}), 2000);
 });
 module.exports = router;
